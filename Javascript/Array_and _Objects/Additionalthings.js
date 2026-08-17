@@ -55,7 +55,41 @@ let result = (val1 && val2) ?? "default";
 
 
 
+//  Browser Storage system
 
+// cookies:- 4KB, manually set, Any window/tab on matching domain.,  Sent automatically on HTTP requests., Session IDs, Authentication tokens.
+
+
+
+
+// Local storage :- 5 - 10 KB, never expires, Any window/tab on matching domain., Purely client-side (Server can't see it)., User preferences, theme toggles, caching.
+
+// 1. Storing data
+localStorage.setItem("theme", "dark");
+
+// 2. Retrieving data
+const theme = localStorage.getItem("theme"); // "dark"
+
+// 3. Removing data
+localStorage.removeItem("theme");
+
+// 4. Clearing everything out completely
+localStorage.clear();
+
+
+
+
+
+const user = { name: "John", age: 30 };
+
+// Serialize to string before saving
+localStorage.setItem("user", JSON.stringify(user));
+
+// Deserialize back to object when reading
+const retrievedUser = JSON.parse(localStorage.getItem("user"));
+
+
+// Session Storage:- 5MB, expire on tab close, Restricted to that exact tab only., Purely client-side (Server can't see it)., Temporary multi-step form data.
 
 
 
