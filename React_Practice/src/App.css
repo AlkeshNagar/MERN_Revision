@@ -1,0 +1,39 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #944545;
+  text-decoration: none;
+  text-transform: none;
+  color: rgb(211, 28, 28);
+  font-weight: 700;
+  font-size: xx-large;
+}
+a {
+  text-decoration: none;
+  text-transform: none;
+  padding: 10px;
+  color: rgb(24, 8, 8);
+}
+
+.red{
+    color: red;
+    background: burlywood;
+}
+.green{
+    color: green;
+    background: yellow;
+}
+.nestedActive{
+background-color: #944545;
+padding: 10px;
+margin: 10px;
+color: white;
+}
+.nestedInActive{
+padding: 10px;
+margin: 10px;
+background-color: #7a7474;
+color: white;
+
+}
+
