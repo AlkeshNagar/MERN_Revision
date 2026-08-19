@@ -178,11 +178,11 @@ fetchData(displayData); // Outputs after 1 second: Name: John, Age: 30
 console.log("Start"); //this will print first
 
 setTimeout(() => {
-  console.log("Timeout Callback (Macro)"); //this will print last as settieput is macro task and will be executed after microtasks are completed.
+  console.log("Timeout Callback (Macro)"); //this will print last as settimeput is macro task and will be executed after microtasks are completed.
 }, 0);
 
 Promise.resolve().then(() => {
-  console.log("Promise Callback (Micro)"); //this will print second as promise is micro task and havehigher priority that macre task.
+  console.log("Promise Callback (Micro)"); //this will print second as promise is micro task and have higher priority that macre task.
 });
 
 console.log("End"); // this willprint third as it is normal code and will be executed after first line of code.

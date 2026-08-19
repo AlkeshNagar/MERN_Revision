@@ -37,3 +37,26 @@ color: white;
 
 }
 
+.ButtonCompo{
+  padding: 20px;
+  background-color: #944545;
+}
+.ButtonCompo p{
+  background-color: #944545;
+  font-size: 20px;
+  color: white;
+
+}
+
+.reducerdiv{
+  display: flex;
+  gap: 10px;
+
+}
+.reducerdiv button{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: azure;
+  font-weight: 600;
+  color: #944545;
+}

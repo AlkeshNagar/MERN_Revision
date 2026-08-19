@@ -14,6 +14,9 @@ import Teacher from "./components/Teacher";
 import Apis from "./Query_and_APIs/Apis";
 import FetchApi from "./Query_and_APIs/FetchApi";
 import AxiosApi from "./Query_and_APIs/AxiosApi";
+import Login from "./protectedRoutes/Login";
+import Protected from "./protectedRoutes/Protected";
+import { Counter } from "./reduxApi/Counter";
 
 export const RouterFile = () => {
   return (
@@ -22,6 +25,8 @@ export const RouterFile = () => {
         <nav>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
+          <Link to="/login">Login</Link>
+          <Link to="/redux">Redux</Link>
           {/*Using NavLink here to use Actice color change functionality. if the link is active/component is active it would change the color*/}
           <NavLink
             className={(e) => {
@@ -52,8 +57,10 @@ export const RouterFile = () => {
 
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Protected Component = {Home} />} />
+          <Route path="/about" element={<Protected Component ={About} />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/redux" element={<Counter />} />
           <Route path="/user/:username" element={<User />} />
 
           {/* Exploring nested route concept, Syntax is bit different */}
